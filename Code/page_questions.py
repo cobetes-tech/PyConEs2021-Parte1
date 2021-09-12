@@ -8,11 +8,16 @@ def questions(result):
 
     st.write(text)
 
-    model_name = defaul_model_name = ""
 
-    user_input = st.text_input("1", defaul_model_name)
-    user_input = st.text_input("2", defaul_model_name)
-    user_input = st.text_input("3", defaul_model_name)
+    question1_text = "Pregunta 1: "
+    question2_text = "Pregunta 2: "
+    question3_text = "Pregunta 3: "
+    default_text = ""
+
+    question1 = st.text_input(question1_text, default_text)
+    question2 = st.text_input(question2_text, default_text)
+    question3 = st.text_input(question3_text, default_text)
+    questions = [question1, question2, question3]
 
     text = """
            Preguntas de ejemplo:
@@ -23,3 +28,5 @@ def questions(result):
            """
 
     st.write(text)
+
+    return questions
