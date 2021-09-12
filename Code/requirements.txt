@@ -83,9 +83,7 @@ testpath==0.5.0
 tokenizers==0.10.3
 toml==0.10.2
 toolz==0.11.1
-torch==1.9.0+cpu
-torchaudio==0.9.0
-torchvision==0.10.0+cpu
+torch==1.9.0+cpu torchvision==0.10.0+cpu torchaudio==0.9.0 -f https://download.pytorch.org/whl/torch_stable.html
 tornado==6.1
 tqdm==4.62.2
 traitlets==5.1.0
