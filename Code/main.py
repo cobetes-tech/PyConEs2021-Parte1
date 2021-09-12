@@ -25,6 +25,7 @@ pages_mapper = {
 ls_page_name = pages_mapper.keys()
 page_name = sidebar(ls_page_name)
 
-pages_mapper[page_name]()
+result = {}
+result[page_name] = pages_mapper[page_name](result)
 
 

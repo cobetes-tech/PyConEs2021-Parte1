@@ -1,6 +1,6 @@
 import streamlit as st
 
-def front():
+def front(result):
 
     image_huggingface_url = "https://avatars.githubusercontent.com/u/25720743?s=200"
 

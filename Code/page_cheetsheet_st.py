@@ -1,6 +1,6 @@
 import streamlit as st
 
-def cheetsheet_st():
+def cheetsheet_st(result):
 
     st.write("""
             # Comandos que nos pueden ser de ayuda:
