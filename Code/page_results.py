@@ -18,9 +18,20 @@ def user_interface():
 
 def logic():
 
-    nlp = st.session_state['nlp_model']
-    context = st.session_state['context_text']
-    questions = st.session_state['questions_text']
+    try:
+        nlp = st.session_state['nlp_model']
+        context = st.session_state['context_text']
+        questions = st.session_state['questions_text']
+
+    except KeyError:
+
+        text =  """
+                Completa los pasos en orden.
+
+                Necesitamos tener un modelo, unas preguntas y un contexto.
+                """
+        st.write(text)
+        return
 
     results = []
 
