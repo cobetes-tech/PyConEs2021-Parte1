@@ -13,8 +13,6 @@ from page_your_turn import your_turn
 
 def main():
 
-    result = {}
-
     pages_mapper = {
                         '1. Portada': front,
                         '2. ¿Qué vamos a hacer?': task,
@@ -29,8 +27,7 @@ def main():
     ls_page_name = pages_mapper.keys()
     page_name = sidebar(ls_page_name)
 
-    result[page_name] = pages_mapper[page_name](result)
-
+    pages_mapper[page_name]()
 
 
 if __name__ == '__main__':

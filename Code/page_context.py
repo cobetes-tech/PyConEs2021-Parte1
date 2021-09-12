@@ -1,6 +1,6 @@
 import streamlit as st
 
-def context(result):
+def context():
 
 
     text =  """
@@ -11,7 +11,7 @@ def context(result):
     st.write(text)
 
     label = "Pega aquí el texto de la intranet"
-    user_input = st.text_area(label, "")
+    context_text = st.text_area(label, "")
 
     text = "---"
     st.write(text)
@@ -26,4 +26,4 @@ def context(result):
            """
     st.write(text)
 
-    return user_input
+    st.session_state['context_text'] = context_text

@@ -1,6 +1,6 @@
 import streamlit as st
 
-def questions(result):
+def questions():
 
     text =  """
             # ¿Qué queremos preguntar?
@@ -17,7 +17,7 @@ def questions(result):
     question1 = st.text_input(question1_text, default_text)
     question2 = st.text_input(question2_text, default_text)
     question3 = st.text_input(question3_text, default_text)
-    questions = [question1, question2, question3]
+    questions_text = [question1, question2, question3]
 
     text = """
            Preguntas de ejemplo:
@@ -29,4 +29,5 @@ def questions(result):
 
     st.write(text)
 
-    return questions
+    # Save state
+    st.session_state['questions_text'] = questions_text

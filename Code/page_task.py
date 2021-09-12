@@ -1,6 +1,6 @@
 import streamlit as st
 
-def task(result):
+def task():
     
     text =  """
             # Tengo dudas, pero paso de leerme toda la intranet

@@ -17,7 +17,7 @@ def user_interface():
            
            deepset/roberta-base-squad2
 
-           Más información aquí: https://huggingface.co/deepset/roberta-base-squad2"
+           Más información aquí: https://huggingface.co/deepset/roberta-base-squad2
            """
     st.write(text)
 
@@ -33,13 +33,13 @@ def logic(user_input):
         text = "Modelo correctamente descargado"
         st.write(text)
 
-        return nlp
-        
+        st.session_state['nlp_model'] = nlp
+
     except OSError:
             text = "Modelo no encontrado"
             st.write(text)
 
-def download_model(result):
+def download_model():
 
     user_input = user_interface()
 
