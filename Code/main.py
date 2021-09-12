@@ -11,21 +11,27 @@ from page_cheetsheet_st import cheetsheet_st
 from page_your_turn import your_turn
 
 
-pages_mapper = {
-                    '1. Portada': front,
-                    '2. ¿Qué vamos a hacer?': task,
-                    '3. Descargar un modelo': download_model,
-                    '4. Contexto': context,
-                    '5. Preguntas': questions,
-                    '6. Resultados': results,
-                    '7. Chuleta': cheetsheet_st,
-                    '8. Os toca': your_turn
-               }
+def main():
 
-ls_page_name = pages_mapper.keys()
-page_name = sidebar(ls_page_name)
+    result = {}
 
-result = {}
-result[page_name] = pages_mapper[page_name](result)
+    pages_mapper = {
+                        '1. Portada': front,
+                        '2. ¿Qué vamos a hacer?': task,
+                        '3. Descargar un modelo': download_model,
+                        '4. Contexto': context,
+                        '5. Preguntas': questions,
+                        '6. Resultados': results,
+                        '7. Chuleta': cheetsheet_st,
+                        '8. Os toca': your_turn
+                    }
+
+    ls_page_name = pages_mapper.keys()
+    page_name = sidebar(ls_page_name)
+
+    result[page_name] = pages_mapper[page_name](result)
 
 
+
+if __name__ == '__main__':
+    main()
