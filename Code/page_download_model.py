@@ -3,13 +3,12 @@ import streamlit as st
 def user_interface():
 
     text =  """
-            # Nos descargamos un modelo que pueda hacer frente a esta tarea
+            # Nos descargamos un modelo de Machine Learning que pueda hacer frente a esta tarea
             """
     st.write(text)
     
     defaul_model_name = ""
     model_name = "Escoge el modelo que quieres usar"
-    
     user_input = st.text_input(model_name, defaul_model_name)
     
     text = """

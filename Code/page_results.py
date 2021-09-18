@@ -26,9 +26,9 @@ def logic():
     except KeyError:
 
         text =  """
-                Completa los pasos en orden.
-
-                Necesitamos tener un modelo, unas preguntas y un contexto.
+                Completa los pasos en orden, porfi.
+                
+                Necesitamos configurar un modelo, unas preguntas y un contexto antes de seguir.
                 """
         st.write(text)
         return
@@ -55,7 +55,8 @@ def logic():
     st.dataframe(results_df)
 
     # For manual inspection
-    expander = st.expander("Texto de la intranet")
+    text = "Texto de la intranet"
+    expander = st.expander(text)
     expander.write(context)
 
 
