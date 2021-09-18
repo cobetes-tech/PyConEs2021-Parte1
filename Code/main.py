@@ -7,7 +7,7 @@ from page_download_model import download_model
 from page_context import context
 from page_questions import questions
 from page_results import results
-from page_cheetsheet_st import cheetsheet_st
+from page_cheatsheet import cheatsheet
 from page_your_turn import your_turn
 
 
@@ -20,7 +20,7 @@ def main():
                         '4. Contexto': context,
                         '5. Preguntas': questions,
                         '6. Resultados': results,
-                        '7. Chuleta': cheetsheet_st,
+                        '7. Chuleta': cheatsheet,
                         '8. Os toca': your_turn
                     }
 
