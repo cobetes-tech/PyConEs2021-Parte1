@@ -5,12 +5,12 @@ def front():
     text =  """
             # ¡Oh, un modelo de ML, vamos a desplegarlo! - Machine learning para adultos 
             
-            ¡Enhorabuena por llegar a uno de los talleres más molones de la PyConEs 2021.!
+            ¡Enhorabuena por llegar a uno de los talleres más molones de la PyConEs 2021!
             
             Hoy vas a trastear con:
 
-            1. NLP, que son las siglas de Natural Language Processing. No tiene nada que ver con Neuro-Linguistic Programming.
-            2. Arquitecturas de redes neurolanes basadas en Transformers (usando la famosa librería HuggingFace).
+            1. **NLP**, que son las siglas de Natural Language Processing. No tiene nada que ver con Neuro-Linguistic Programming.
+            2. Arquitecturas de redes neuronales basadas en **Transformers** (usando la famosa librería **HuggingFace**).
             3. Resolviendo la tarea conocida como "**Extractive Question Answering**".
             """
     st.write(text)
