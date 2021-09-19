@@ -1,5 +1,8 @@
 import streamlit as st
 import pandas as pd
+import pylab as plt
+import seaborn as sns
+
 
 def user_interface():
 
@@ -24,6 +27,8 @@ def logic():
 
     except KeyError:
 
+        st.write(st.session_state)
+
         text =  """
                 Completa los pasos en orden, porfi.
 
@@ -45,15 +50,28 @@ def logic():
 
         results.append(res)
 
-    # Formatting results
+    # Formatting tabular results
     results_df = pd.DataFrame(results)
     results_df['question'] = questions
-    selected_cols = ['score', 'question', 'answer']
-    results_df = results_df[selected_cols]
+    results_df['score'] = 100*results_df['score']
+    selected_cols = ['question', 'answer']
+    results_df2 = results_df[selected_cols]
 
-    st.dataframe(results_df)
+    st.table(results_df2)
 
-    # For manual inspection
+    # Plotting score
+    title = "¿Cuanto nos fiamos de las respuestas?"
+    expander = st.expander(title)
+    
+    fig = plt.figure(1)
+    _ = plt.title("¿Cuanto nos fiamos de la respuesta?")
+    _ = sns.barplot(x='score', y='question', data=results_df, orient='h')
+    _ = plt.grid(True)
+    _ = plt.xlim(0, 100)
+
+    expander.pyplot(fig)
+
+    # Intranet text for user manual inspection
     text = "Texto de la intranet"
     expander = st.expander(text)
     expander.write(context)
