@@ -15,10 +15,15 @@ def user_interface():
     user_input = st.text_input(model_name, defaul_model_name)
     
     pressed = False
-    
+
     if user_input:
         text = "Descargar modelo"
         pressed = st.button(text)
+
+    return pressed, user_input
+
+
+def user_interface_2():
 
     text = "---"
     st.write(text)
@@ -32,8 +37,6 @@ def user_interface():
            """
     st.write(text)
 
-    return pressed
-
 
 def logic(user_input):
 
@@ -42,18 +45,21 @@ def logic(user_input):
     try:
         nlp = pipeline("question-answering", model=user_input, tokenizer=user_input)
         text = "*¡Modelo correctamente descargado!*"
-        st.write(text)
+        return text
 
         st.session_state['nlp_model'] = nlp
 
     except OSError:
             text = "Modelo no encontrado"
-            st.write(text)
+            return text
 
 
 def download_model():
 
-    pressed = user_interface()
+    pressed, user_input = user_interface()
 
     if pressed:
-        return logic(user_input)
+        result = logic(user_input)
+        st.write(result)
+
+    user_interface_2()
