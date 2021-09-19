@@ -7,12 +7,24 @@ def user_interface():
             """
     st.write(text)
     
+    text = "Escoge el modelo que quieres usar"
+    st.write(text)
+
     defaul_model_name = ""
-    model_name = "Escoge el modelo que quieres usar"
+    model_name = "Modelo seleccionado"
     user_input = st.text_input(model_name, defaul_model_name)
     
+    pressed = False
+    
+    if user_input:
+        text = "Descargar modelo"
+        pressed = st.button(text)
+
+    text = "---"
+    st.write(text)
+
     text = """
-           Te recomendamos este: 
+           # Te recomendamos este modelo: 
            
            deepset/roberta-base-squad2
 
@@ -20,7 +32,7 @@ def user_interface():
            """
     st.write(text)
 
-    return user_input
+    return pressed
 
 
 def logic(user_input):
@@ -29,7 +41,7 @@ def logic(user_input):
     
     try:
         nlp = pipeline("question-answering", model=user_input, tokenizer=user_input)
-        text = "Modelo correctamente descargado"
+        text = "*¡Modelo correctamente descargado!*"
         st.write(text)
 
         st.session_state['nlp_model'] = nlp
@@ -38,14 +50,10 @@ def logic(user_input):
             text = "Modelo no encontrado"
             st.write(text)
 
+
 def download_model():
 
-    user_input = user_interface()
+    pressed = user_interface()
 
-    if user_input:
-
-            text = "Descargar modelo"
-            pressed = st.button(text)
-
-            if pressed:
-                return logic(user_input)
+    if pressed:
+        return logic(user_input)

@@ -10,7 +10,7 @@ def cheatsheet():
     expander = st.expander(title)
     text = "*st.write* Te sirve para escribir cualquier cosa: texto, variables, resultados de operaciones, dataframes \
              (aunque hay una mejor alternativa para los dataframes), ... Lo mejor de todo es que también acepta \
-            sintáxis Markdown. Aquí tienes una [chuleta](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet), \
+            sintáxis Markdown. Aquí tenéis una [chuleta](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet), \
             por si quieres probar."
     expander.write(text)
 
@@ -69,7 +69,7 @@ def cheatsheet():
 
 
     text =  """
-            Y si necesitas algo más:
+            ## Y si necesitas algo más:
 
             1. Puedes mirar el código de esta aplicación, que tiene muchos componentes de ejemplo.
             2. O puedes preguntarnos.
@@ -78,4 +78,3 @@ def cheatsheet():
             Lo que tú prefieras :-)
             """
     st.write(text)
-    

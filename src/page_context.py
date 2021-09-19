@@ -13,6 +13,10 @@ def context():
     label = "Pega aquí el texto de la intranet"
     context_text = st.text_area(label, "")
 
+    if context_text:
+        text = "*¡Contexto listo!*"
+        st.write(text)
+
     text = "---"
     st.write(text)
 

@@ -5,9 +5,8 @@ def user_interface():
 
     text =  """
             # Y estas son las respuestas
-            ¿Habremos tenido suerte?
+            ¿Habrá funcionado?
             """
-
     st.write(text)
 
     text = "Calcular resultados"
@@ -27,7 +26,7 @@ def logic():
 
         text =  """
                 Completa los pasos en orden, porfi.
-                
+
                 Necesitamos configurar un modelo, unas preguntas y un contexto antes de seguir.
                 """
         st.write(text)

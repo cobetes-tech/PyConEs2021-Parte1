@@ -19,8 +19,15 @@ def questions():
     question3 = st.text_input(question3_text, default_text)
     questions_text = [question1, question2, question3]
 
+    if all(questions_text):
+        text = "*¡Preguntas listas!*"
+        st.write(text)
+
+    text = "---"
+    st.write(text)
+
     text = """
-           Preguntas de ejemplo:
+           # Preguntas de ejemplo:
 
            * When is the reduced day?
            * What is the training budget?
