@@ -45,9 +45,8 @@ def logic(user_input):
     try:
         nlp = pipeline("question-answering", model=user_input, tokenizer=user_input)
         text = "*¡Modelo correctamente descargado!*"
-        return text
-
         st.session_state['nlp_model'] = nlp
+        return text
 
     except OSError:
             text = "Modelo no encontrado"
