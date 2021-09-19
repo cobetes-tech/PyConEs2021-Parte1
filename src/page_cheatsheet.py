@@ -62,9 +62,10 @@ def cheatsheet():
             """
     expander.write(text)
 
-    title = "7. Dataframe"
+    title = "7. Dataframe / table"
     expander = st.expander(title)
-    text = "*st.dataframe* Aunque puedes usar *st.write*, para este caso concreto te recomiendo usar *st.dataframe*, a nivel visual queda mucho más molón."
+    text = "*st.dataframe* / *st.table* Aunque puedes usar *st.write*, para este caso concreto te recomiendo mucho más usar *st.dataframe* o *st.table*, \
+            a nivel visual queda mucho más molón."
     expander.write(text)
 
 
