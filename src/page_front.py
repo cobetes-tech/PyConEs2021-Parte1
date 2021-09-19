@@ -12,6 +12,14 @@ def front():
             1. **NLP**, que son las siglas de Natural Language Processing. No tiene nada que ver con Neuro-Linguistic Programming.
             2. Arquitecturas de redes neuronales basadas en **Transformers** (usando la famosa librería **HuggingFace**).
             3. Resolviendo la tarea conocida como "**Extractive Question Answering**".
+            4. Y poniendo en producción un modelo de Machine Learning usando **Streamlit** y **Heroku**.
+
+            ---
+
+            Si tienes cualquier duda, aquí tienes los nombres e emails de los ponentes, pregunta sin miedo :) 
+            * Ricardo Guerrero: [ricgu8086@gmail.com](mailto:ricgu8086@gmail.com)
+            * Enrique Josue Álvarez: [ejarkm@gmail.com](mailto:ejarkm@gmail.com)
+            * Lino Figueroa: [impalah@gmail.com](mailto:impalah@gmail.com)
             """
     st.write(text)
 
